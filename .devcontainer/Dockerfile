@@ -32,7 +32,7 @@ RUN conda init bash
 # Make sure the new user owns their home directory and has access to conda
 USER root
 RUN chown -R $USERNAME:$USERNAME /home/$USERNAME \
-    && chown -R $USERNAME:$USERNAME /opt/conda/envs/codespace
+    && chown -R $USERNAME:$USERNAME /opt/conda/envs/llm_engineer
 
 # Switch back to the non-root user
 USER $USERNAME
